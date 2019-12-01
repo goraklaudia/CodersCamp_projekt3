@@ -21,7 +21,7 @@ function fetchFromApi(cityInput) {
 }
 
 function render(x) {
- $.get('../src/modules/weatherNow/nowDays.mst', function(template) {
+ $.get('/CodersCamp_projekt3/src/modules/weatherNow/nowDays.mst', function(template) {
   document.getElementById('nameOfCity').textContent = x.city.name;
   const result = Mustache.to_html(template, x.list[0]);
   $('.main').html(result);
